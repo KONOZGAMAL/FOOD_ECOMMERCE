@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wish_lists",
+  "info": {
+    "singularName": "wish-list",
+    "pluralName": "wish-lists",
+    "displayName": "Wish-list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "wish_lists"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "text"
+    },
+    "categoryID": {
+      "type": "integer"
+    },
+    "productID": {
+      "type": "integer"
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "pieces": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Normal",
+        "Spicy",
+        "Dessert",
+        "Appetizers",
+        "Drinks"
+      ]
+    },
+    "imgUrl": {
+      "type": "text"
+    },
+    "IdUser": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/global/variables.scss";
+@import "../../styles/global/responsive.scss";
+.register{
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 680px;
+      background-color: $main-color;
+      border-radius: 14px;
+       margin: auto;
+       padding: 0;
+       box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+       @include md {
+       background-color: #ddd;
+       }
+        .form-register{
+            display: flex;
+            flex-direction: column;
+            width: 340px;
+           input:not(:last-of-type){
+            padding: 10px 0;
+            margin: 12px 35px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid #EEE;
+            font-size: 17px;
+            color: #fff;
+            @include md {
+                margin: 5px;
+                width: 90%;
+                }
+            &:focus{
+                margin-top: 20px;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                outline: none;
+            }
+            &::placeholder{
+                color: #ddd;
+                font-size: 14px;
+            }
+
+           }
+           .btn{
+            width: fit-content;
+            background-color: cadetblue;
+            margin: 20px 35px;
+            padding: 10px 40px;
+           border: none;
+           color: #fff;
+           cursor: pointer;
+        }
+        }
+        .img-register{
+            background: url(../../../public/assets/images/form.jpg);
+            width: 340px;
+            height: 500px;
+            background-size: cover;
+            overflow: hidden;
+            border-top-right-radius: 14px;
+            border-bottom-right-radius: 14px;
+            @include md {
+               display: none;
+              }
+        }
+    }
+}

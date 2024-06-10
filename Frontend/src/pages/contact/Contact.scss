@@ -1,0 +1,115 @@
+@import "../../styles/global/_variables.scss";
+@import "../../styles/global/responsive.scss";
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  background-color: #f6f4f0;
+  height: 450px;
+  width: 100%;
+  @include md {
+    height: 550px;
+  }
+  .icons-social {
+    color: black;
+    width: 85%;
+    .part1 {
+      margin: 4px 0;
+      h5 {
+        color: rgb(10, 9, 9);
+        padding: 15px 5px;
+        font-size: 23px;
+      }
+      .icon-social {
+        font-size: 24px;
+        color: $color-font;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        span {
+          padding: 5px;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+      p {
+        padding: 5px;
+        color: $color-font;
+        a {
+            color: $color-font;
+        }
+      }
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .form {
+    background-color: $white;
+    padding: 20px;
+    position: absolute;
+    top: -70px;
+    right: 90px;
+    @include md {
+      top: auto;
+      right: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      padding: 15px;
+      color: rgb(54, 50, 50);
+    }
+    input {
+      width: calc(50% - 6px);
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin: 3px;
+      &:focus {
+        outline: none;
+      }
+      @include sm {
+        width: calc(100% - 6px);
+      }
+    }
+    textarea,
+    select {
+      width: calc(100% - 6px);
+      border: 1px solid #ccc;
+      margin: 4px;
+      padding: 15px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn-contact {
+      width: 100%;
+      margin: 4px;
+      border: none;
+      background-color: black;
+      padding: 25px;
+      cursor: pointer;
+      color: $white;
+      text-transform: uppercase;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        background-color: rgb(54, 50, 50);
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @include md {
+  }
+}
+.map-contact {
+  width: 100%;
+  height: 400px;
+  // margin: 20px 0;
+  .leaflet-container {
+    height: 100%;
+  }
+}

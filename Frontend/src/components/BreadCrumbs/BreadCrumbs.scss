@@ -1,0 +1,24 @@
+@import "../../styles/global/_variables.scss";
+@import "../../styles/global/responsive.scss";
+
+.breadCrumbs{
+    background-image: url("../../../public/assets/images/BGa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 10% right 10%;
+    // background-position: top 10% left 10%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .crumbText{
+    font-size: 2rem;
+    font-weight: 500;
+    span{
+        opacity: 0.5;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    }
+}

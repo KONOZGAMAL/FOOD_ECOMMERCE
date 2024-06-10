@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopping_carts",
+  "info": {
+    "singularName": "shopping-cart",
+    "pluralName": "shopping-carts",
+    "displayName": "shopping-cart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "categoryID": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "productID": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "userEmail": {
+      "type": "email"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "IdUser": {
+      "type": "integer"
+    },
+    "imgUrl": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../styles/global/responsive.scss";
+@import "../../styles/global/_variables.scss";
+.swiper-wrapper{
+.hero_banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 90px);
+  background-position: top 25% right 0;
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin-bottom:35px;
+  object-fit: cover;
+  @include md {
+    text-align: center;
+    padding: 0px 5px;
+  }
+  .banner-content-wrapper{
+    h2{
+      font-size: 44px;
+      line-height: 1.5;
+    }
+    h4{
+      font-size: 33px;
+      line-height: 1.5;
+      color: $main-color;
+    }
+    .banner-content-wrapper:nth-last-child(2){
+      text-transform: capitalize;
+    }
+    p{
+      width: 40%;
+      margin: 10px 0;
+      @include md {
+        width: 75%;
+        margin: 10px auto;
+      }
+    }
+  }
+  .btn{
+    margin-top: 2.5rem;
+    a {
+              width: 280px;
+              height: 62px;
+              padding: 16px 42px 16px 42px;
+              border: 4px 0px 0px 0px;
+              opacity: 0px;
+              background-color: $main-color;
+              transition: 0.5s ease-in-out;
+    }
+  }
+}
+  .swiper-pagination {
+    position: relative;
+    margin-top: -15px;
+    .swiper-pagination-bullet {
+      width: 17px;
+      height: 17px;
+      background-color: white;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $main-color;
+    }
+  }
+.slid1{
+  background-image: url("../../../public/assets/images/slider1.webp");
+}
+.slid2{
+  background-image: url("../../../public/assets/images/Dessert2.jpg");
+  color:$color-font;
+}
+.slid3{
+  background-image: url("../../../public/assets/images/Appetizers2.jpg");
+  color:$color-font;
+  @include sm{
+    color: $white;
+  }
+}
+.slid4{
+  background-image: url("../../../public/assets/images/banner-summer.jpg");
+  color:$color-font;
+}
+}

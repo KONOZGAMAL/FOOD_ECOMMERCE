@@ -1,0 +1,86 @@
+@import "../../styles/global/variables.scss";
+@import "../../styles/global/responsive.scss";
+.register {
+  background-color: #e0e3e8;
+  padding-bottom: 40px!important;
+  @include md {
+    padding: 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    background-color: $main-color;
+    border-radius: 14px;
+    margin: auto;
+    padding: 0;
+    @include md {
+      max-width: 450px;
+      width: 100%;
+      border-radius: 0px;
+    }
+    .form-login {
+      display: flex;
+      flex-direction: column;
+      width: 340px;
+      input:not(:last-of-type) {
+        padding: 10px 0;
+        margin: 5px 25px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #eee;
+        font-size: 17px;
+        color: #fff;
+        @include md {
+            margin: 5px;
+            width: 90%;
+            }
+        &::placeholder {
+          color: #fff;
+        }
+        &:focus {
+          margin-top: 20px;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -ms-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          outline: none;
+        }
+      }
+      .btn {
+        width: fit-content;
+        background-color: cadetblue;
+        padding: 10px 40px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 25px;
+      }
+      @include md {
+        margin: 40px;
+      }
+    }
+    .txt {
+      text-align: center;
+      font-size: 17px;
+      padding: 20px 0;
+      a {
+        color: cadetblue;
+      }
+    }
+    .img-login {
+      background: url(../../../public/assets/images/form.jpg);
+      width: 340px;
+      height: 450px;
+      background-size: cover;
+      overflow: hidden;
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px;
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

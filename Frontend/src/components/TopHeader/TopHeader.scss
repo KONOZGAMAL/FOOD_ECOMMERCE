@@ -1,0 +1,57 @@
+@import "../../styles/global/variables.scss";
+@import "../../styles/global/responsive.scss";
+.TopHeader {
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-second;
+  color: $color-font;
+  @include md{
+    padding: 6px 20px;
+  }
+  p{
+    font-size: 15px;
+    span{
+        animation: changeColor 2s 0.9s  infinite alternate-reverse ease-in-out;
+      
+    }
+    @include sm{
+       display: none;
+      }
+  }
+  .links {
+      padding: 5px;
+      @include sm{
+        text-align: center;
+        width: 100%;
+       }
+    a {
+      position: relative;
+      padding: 7px;
+      color: $color-font;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    .border-element::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: $color-font;
+      }
+  }
+}
+@keyframes changeColor {
+    0%{
+        color: $main-color;
+        font-weight: 500;
+    }
+    100%{
+        color: $color-font;
+        font-weight: 400;
+    }
+}

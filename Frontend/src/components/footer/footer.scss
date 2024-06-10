@@ -1,0 +1,117 @@
+@import "../../styles/global/_variables.scss";
+@import "../../styles/global/responsive.scss";
+.footer {
+  background-color: #F6F4F0;
+  .container {
+    padding: 40px 40px;
+    .logo-first{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sm{
+            flex-direction: column;
+            align-items: self-start;
+            }
+        .logo{
+            text-align: start;
+            margin-bottom: 20px;
+            p{
+                color: black;
+                padding-top: 5px;
+            }
+        }
+        .form{
+            display: flex;
+            width: 40%;
+            @include sm{
+                width: 100%;
+                }
+            input{
+                height: 3.125rem;
+                padding: 0 1.25em;
+                font-size: 14px;
+                width: 70%;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid transparent;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            button{
+                background-color: rgb(92, 145, 250);
+                color: #fff;
+                white-space: nowrap;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border: none;
+                width: 20%;
+                cursor: pointer;
+                transition: 0.4s ease-in-out;
+                &:hover{
+                  background-color: blue;
+                }
+                @include sm{
+                  width: 30%;
+                  }
+            }
+        }
+    }
+    .foot-fin {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 10px;
+      .progress {
+        width: 80%;
+        height: 3px;
+        background-color: black;
+        @include md {
+          width: 60%;
+        }
+        @include sm {
+          width: 100%;
+        }
+      }
+      .icon-social {
+        a{
+          cursor: pointer;
+          padding: 10px;
+          font-size: 22px;
+          svg{
+            color: black;
+           &:hover{
+            color: #acabab;
+           }
+          }
+          @include md {
+            padding: 5px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .fin{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      gap: 15px;
+      .copyright{
+        color: gray;
+       font-size: 12px;
+      }
+      img{
+       height: 50px;
+       @include sm{
+        width: 100%;
+       }
+      }
+    }
+    @include sm{
+      padding: 20px;
+    }
+  }
+}

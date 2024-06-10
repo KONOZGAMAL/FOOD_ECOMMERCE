@@ -1,0 +1,115 @@
+@import "../global/_variables.scss";
+@import "../global/responsive.scss";
+.card {
+  width: 20rem;
+  border-radius: 8px;
+  padding: 0.7rem;
+  background: #1d1d1d;
+  position: relative;
+  margin: 10px;
+  .newBadge {
+    position: absolute;
+    top: 0;
+    right: 2.25rem;
+    background-color: $main-color;
+    padding: 4px 12px;
+    color: $white;
+    z-index: 9;
+  }
+  .image {
+    width: 100%;
+    height: 15rem;
+    img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s ease-in-out;
+    }
+  }
+  .cartPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-bottom: 1px solid #ffffff1a;
+    padding-bottom: 8px;
+    & > span {
+      font-size: 19px;
+      font-weight: 600;
+      color: $main-color;
+    }
+    .rate {
+      font-size: 17px;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.44rem;
+      svg {
+        color: gold;
+      }
+    }
+  }
+  .cartTitle {
+    margin-top: 0.4rem;
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+  .cartOption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    color: $white;
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 0.69rem;
+      svg {
+        color: $main-color;
+      }
+    }
+  }
+  .card-btn {
+    width: 100%;
+    text-align: center;
+    margin: 1.2rem auto;
+    // button
+    a {
+      width: 100%;
+      border: 3px solid rgba(255, 255, 255, 1);
+      padding: 5px 50px;
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 14px;
+      background-color: transparent;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 1);
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $main-color;
+        border-radius: 14px;
+        transition: width 0.4s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  @include md {
+    width: 21rem;
+  }
+}
