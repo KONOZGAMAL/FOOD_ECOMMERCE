@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container">
         <div className="logo-first">
           <div className="logo">
-            <img src="../../../public/assets/images/logo-dark.png" alt="logo" />
+            <img src="./assets/images/logo-dark.png" alt="logo" />
             <p>Terrific burgers since 2015</p>
           </div>
           <div className="form">
@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="fin">
           <p className="copyright">© 2024 Made by Konuz</p>
           <img
-            src="../../../public/assets/images/payment.png"
+            src="./assets/images/payment.png"
             className="img-payment"
             alt=""
           />

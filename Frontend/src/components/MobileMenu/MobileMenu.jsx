@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import "../../styles/components/MobileMenu.scss";
 import { MobileHandlerContext } from "../../utils/mobileHandler";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";

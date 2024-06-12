@@ -89,7 +89,8 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-image: url(../../../public/assets/images/back.webp);
+  background: url("/assets/images/brand-shape/back.png");
+  // background-image: url(../../../public/assets/images/back.webp);
   background-repeat: no-repeat;
   background-size: cover;
   img {

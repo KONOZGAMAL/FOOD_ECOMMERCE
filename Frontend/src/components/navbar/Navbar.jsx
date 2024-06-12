@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { MobileHandlerContext } from "../../utils/mobileHandler";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../rtk/slices/authSlice";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 import { GetAllCartFromServer } from "../../rtk/slices/cartsSlice";
 import { GetAllWishlistFromServer } from "../../rtk/slices/wishListSlice";
 export default function Navbar({ cart, wishlist }) {
@@ -38,7 +38,7 @@ useEffect(() => {
     <nav className="nav">
       <div className="container">
         <Link to={"/"} className="logo">
-          <img src="../../../public/assets/images/logo-light.png" alt="logo" />
+          <img src="./assets/images/logo-light.png" alt="logo" />
         </Link>
         <ul>
           <NavLink to="/">Home</NavLink>

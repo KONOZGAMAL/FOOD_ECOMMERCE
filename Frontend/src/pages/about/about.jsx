@@ -1,5 +1,4 @@
 // import React from 'react'
-
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 import HeadLines from "../../components/HeadLines/HeadLines";

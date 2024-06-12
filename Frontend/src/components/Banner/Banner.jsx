@@ -1,5 +1,5 @@
 
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 import { Link } from "react-router-dom";
 import "./Banner.scss";
 export default function Banner({text}) {

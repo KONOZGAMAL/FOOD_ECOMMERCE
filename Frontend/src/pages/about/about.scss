@@ -100,8 +100,10 @@
         .profile-title {
           position: absolute;
           font-size: 33px;
-            bottom: -25px;
-            left: -25px;
+          bottom: -25px;
+          left: 50px; 
+          transition:all 0.5s ease-in-out;
+          color: transparent;
         }
         .name-wrapper {
           display: flex;
@@ -152,7 +154,7 @@
         }
         .profile-title {
           bottom: 50px;
-          left: 50px;
+          color: $main-color;
         }
       }
     }

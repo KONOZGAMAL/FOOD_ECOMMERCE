@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -9,7 +8,7 @@ import {
   AddItemToServer,
   GetAllCartFromServer,
 } from "../../rtk/slices/cartsSlice";
-import { AddItemToWishlist } from "../../rtk/slices/wishListSlice";
+import { AddItemToWishlist, GetAllWishlistFromServer } from "../../rtk/slices/wishListSlice";
 import { toast } from "react-toastify";
 import {
   MdAddShoppingCart,
@@ -25,11 +24,10 @@ export default function ProductDetails() {
   const productDetails = useSelector(
     (state) => state.AllProducts.productDetails
   );
-  const { cart } = useSelector((state) => state.carts);
-  const { wishlist } = useSelector((state) => state.wish_List);
-  // console.log(wishlist);
+  const { cart, isLoading } = useSelector((state) => state.carts);
+  const { wishlist , loading} = useSelector((state) => state.wish_List);
+
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
 
   useEffect(() => {
     if (slug) {
@@ -38,12 +36,10 @@ export default function ProductDetails() {
   }, [dispatch, slug]);
 
   const userId = localStorage.getItem("idUser");
-  // const token = localStorage.getItem("token");
 
   useEffect(() => {
     dispatch(GetAllCartFromServer());
   }, [dispatch]);
-
   const handleCart = (productsData) => {
     let isSameProductExistInCart = cart.some(
       (product) => Number(product.attributes.productID) === productsData.id
@@ -54,7 +50,7 @@ export default function ProductDetails() {
           data: {
             name: productsData.attributes.name,
             quantity: Number(quantity),
-            imgUrl:`${productsData.attributes.image.data.attributes.url}`,
+            imgUrl: `${productsData.attributes.image.data.attributes.url}`,
             categoryID: productsData.id,
             price: productsData.attributes.price,
             productID: productsData.id,
@@ -64,13 +60,13 @@ export default function ProductDetails() {
           },
         })
       );
+        dispatch(GetAllCartFromServer());
     } else {
       toast.error("Same product added to the Cart already!", {
         hideProgressBar: true,
         position: "bottom-right",
       });
     }
- 
   };
   const handleWishList = (productsData) => {
     let isSameProductExistInCart = wishlist.some(
@@ -94,6 +90,7 @@ export default function ProductDetails() {
           },
         })
       );
+      dispatch(GetAllWishlistFromServer());
     } else {
       toast.error("Same product added to the wishlist already!", {
         hideProgressBar: true,
@@ -135,13 +132,16 @@ export default function ProductDetails() {
             <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
           </div>
           <div className="items">
-            <button className="add" onClick={() => handleCart(productDetails)}>
+            <button className="add" onClick={() => handleCart(productDetails)} 
+            disabled={isLoading}
+            >
               <MdAddShoppingCart />
               Add to cart
             </button>
             <button
               className="add"
               onClick={() => handleWishList(productDetails)}
+              disabled={loading}
             >
               <MdFavoriteBorder />
               Add to wishlist

@@ -7,7 +7,7 @@ import { Navigation, Scrollbar } from "swiper/modules";
 import { useContext } from "react";
 import Loading from "../../components/Loading/Loading";
 import { MobileHandlerContext } from "../../utils/mobileHandler";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 export default function MostSilling({ productData, isLoading }) {
   const { isMobile } = useContext(MobileHandlerContext);
   if (isLoading) {

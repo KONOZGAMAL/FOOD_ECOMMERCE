@@ -1,6 +1,4 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
@@ -49,47 +47,3 @@ export default function BrandShape() {
     </>
   );
 }
-/*
- <Swiper
-        loop={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        autoplay={{
-          delay: 1000,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div className="brand-shape">
-            <img src="./assets/images/brand-shape/01.svg" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="brand-shape">
-            <img src="./assets/images/brand-shape/02.svg" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="brand-shape">
-            <img src="./assets/images/brand-shape/03.svg" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="brand-shape">
-            <img src="./assets/images/brand-shape/04.svg" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="brand-shape">
-            <img src="./assets/images/brand-shape/05.svg" alt="" />
-          </div>
-        </SwiperSlide>
-      </Swiper>
-*/
-//f39dfae.e-con-full.e-flex.e-con.e-parent
-// .swiper.brand-slider.swiper-initialized
-// .swiper-horizontal.swiper-pointer-events

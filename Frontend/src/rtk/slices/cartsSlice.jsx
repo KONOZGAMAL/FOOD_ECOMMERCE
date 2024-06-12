@@ -6,6 +6,7 @@ const initialState = {
   cart: [],
   totalQuantity: 0,
   price: 0,
+  isLoading:false,
 };
 // get all cart from server side
 export const GetAllCartFromServer = createAsyncThunk(
@@ -26,7 +27,6 @@ export const GetAllCartFromServer = createAsyncThunk(
 export const AddItemToServer = createAsyncThunk(
   "cart/AddItemToServer",
   async (cartFromUser) => {
-    console.log(cartFromUser);
     try {
       const config = {
         headers: {
@@ -83,6 +83,11 @@ const cartSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+
+    builder.addCase(AddItemToServer.fulfilled, (state) => {
+      state.isLoading = true
+    });
+
     builder.addCase(GetAllCartFromServer.fulfilled, (state, action) => {
       // state.cart = action.payload.data;
        state.cart = action.payload.data.filter((el) => {

@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 // import { toast } from "react-toastify";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 export default function Card({ productsData, slug }) {
   const navigate = useNavigate();
   const returnDetailsPage = (el) => {

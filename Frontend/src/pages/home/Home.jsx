@@ -6,9 +6,7 @@ import Slider from "./Slider";
 import Category from "./Category";
 import BrandShape from "./BrandShape";
 export default function Home() {
-  // const {  productData , isLoading , error} = useSelector((state)=> state.AllProducts);
   const { productData , isLoading } = useSelector((state) => state.AllProducts);
- console.log(isLoading);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetAllProducts());

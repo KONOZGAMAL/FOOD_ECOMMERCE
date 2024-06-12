@@ -9,10 +9,11 @@ import {
   FilterCategory,
   GetAllCategories,
 } from "../../rtk/slices/ProductSlice";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import GetDelivery from "./GetDelivery";
+import { motion } from "framer-motion";
 export default function Shop() {
-  const { allCategories, filterCategory} = useSelector(
+  const { allCategories, filterCategory } = useSelector(
     (state) => state.AllProducts
   );
   const dispatch = useDispatch();
@@ -65,13 +66,20 @@ export default function Shop() {
         </div>
         <div className="shop-items">
           {filterCategory?.data?.map((items) =>
-            items?.attributes?.products?.data?.map((item, _id) => (
+            items?.attributes?.products?.data?.map((item) => (
+              <motion.div
+                layout
+                initial={{ scale: 0}}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6 }}
+                key={item.id}
+              >
                 <Card
                   productsData={item}
                   slug={`shop/${item?.attributes?.slug}`}
                   id={item.id}
-                  key={_id}
                 />
+              </motion.div>
             ))
           )}
         </div>

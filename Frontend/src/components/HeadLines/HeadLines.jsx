@@ -1,5 +1,5 @@
 import "./HeadLines.scss";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
 export default function HeadLines({ title, suptitle }) {
   return (
     <section className="head-lines">

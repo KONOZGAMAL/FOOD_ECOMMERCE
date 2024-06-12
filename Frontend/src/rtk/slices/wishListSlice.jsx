@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 const initialState = {
   wishlist: [],
+  loading:false,
 };
 
 // add Wishlist to server side
@@ -69,6 +70,9 @@ const WishListSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(AddItemToWishlist.fulfilled, (state) => {
+      state.loading = true;
+    });
     builder.addCase(GetAllWishlistFromServer.fulfilled, (state, action) => {
       // state.wishlist = action.payload.data;
       state.wishlist = action.payload.data.filter((el) => {
