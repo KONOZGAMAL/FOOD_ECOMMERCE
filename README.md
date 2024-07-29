@@ -15,6 +15,7 @@
 <h2>Setup</h2>
 <p>Make sure to install the dependencies:</p>
 
+```bash
 # npm
 npm install
 
@@ -26,3 +27,4 @@ yarn install
 
 # bun
 bun install
+```
